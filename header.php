@@ -1,3 +1,13 @@
+<?php
+/**
+ * This is the template that displays all of the <head> section.
+ *
+ * @link https://livecomposerplugin.com/themes/
+ *
+ * @package LC Blank
+ */
+
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -15,4 +25,10 @@
 </head>
 <body <?php body_class(); ?>>
 
-	<?php echo dslc_hf_get_header(); ?>
+<?php
+
+if ( function_exists( 'dslc_hf_get_header' ) ) {
+	echo dslc_hf_get_header();
+}
+
+?>
