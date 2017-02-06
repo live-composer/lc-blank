@@ -7,11 +7,12 @@
  * @package LC Blank
  */
 
-get_header(); ?>
+get_header();
+$url = admin_url( 'post-new.php?post_type=dslc_templates' );
+?>
 
-	<br><br>
 	<div class="align-center">
-		You can power this search results with LC by setting the page by in WP admin > Live Composer > Archives &amp; Search
+		You can <a href="<?php echo $url; ?>">create design</a> for this archive page in the Live Composer. <a href="<?php echo $url; ?>">WP Admin > Live Composer > Templates.</a>
 	</div>
 
 <?php get_footer(); ?>
