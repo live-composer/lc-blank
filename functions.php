@@ -57,7 +57,7 @@ if ( ! defined( 'DS_LIVE_COMPOSER_VER' ) ) {
 		</div>
 	<?php }
 	add_action( 'admin_notices', 'lct_notification' );
-
+}
 
 /**
  * Proper <title> for header.php - Pass your seperator in header.php. Default: '|'
