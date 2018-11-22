@@ -32,6 +32,13 @@ if ( ! function_exists( 'lct_theme_setup' ) ) {
 		// Enable support for HTML5 markup.
 		add_theme_support( 'html5', array( 'comment-list', 'search-form', 'comment-form' ) );
 
+		$menus = dslc_get_option( 'menus', 'dslc_plugin_options_navigation_m' );
+
+		if ( $menus == '' ) {
+			$dslc_plugin_options = get_option( 'dslc_plugin_options' );
+			$dslc_plugin_options['menus'] = 'Main Menu';
+			update_option( 'dslc_plugin_options', $dslc_plugin_options );
+		}
 	}
 } add_action( 'after_setup_theme', 'lct_theme_setup' );
 
